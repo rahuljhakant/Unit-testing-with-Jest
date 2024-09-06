@@ -1,22 +1,20 @@
-
-
-
 describe('Number operations', () => {
 
     test("1 plus 1 should be equal to 2", () => {
 
         expect(1 + 1).toBe(2);
-        let a = 1
-        let b = 2
+        let a = 1;
+        let b = 2;
         expect(a + b).toBe(3);
     });
 
     test("2 plus 2 should be equal to 4", () => {
 
         expect(2 + 2).toBe(4);
-        let a = 2
-        let b = 2
+        let a = 2;
+        let b = 2;
         expect(a + b).toBe(4);
+
     });
 
 })
@@ -25,13 +23,13 @@ describe('Number operations', () => {
 describe('testing others matchers methods', () => {
 
     test('Testing that a variable is undefined', () => {
-        let number = undefined
+        let number = undefined;
         expect(number).not.toBeDefined();
         expect(number).toBeUndefined();
         expect(number).not.toBeNull();
         expect(number).toBeFalsy();
         expect(number).not.toBeTruthy();
-    })
+    });
 
     test('Should expect zero to act like zero', () => {
         let number = 0
@@ -61,30 +59,30 @@ describe('testing others matchers methods', () => {
 
     test("there should be no I in team", () => {
         let string = 'team';
-
         expect(string).not.toMatch(/I/);
     })
 
 
     test("there is 'stop' in Christopher", () => {
         let string = 'Christopher';
-
         expect(string).toMatch(/stop/);
     })
 
     const shoppingList = ["Milk", "Trash bags", "Paper towels", "Iphones"];
     test("the shopping list doesn't have PS4", () => {
-        expect(shoppingList).not.toContain('PS4')
-        expect(shoppingList).toContain('Milk')
+        expect(shoppingList).not.toContain('PS4');
+        expect(shoppingList).toContain('Milk');
     })
 })
 
 
 // testing primitive and reference type equality
 describe("Testing Reference equality", () => {
+
     const user = {
         name: "Clement"
     }
+    
     user['age'] = 45;
 
     test("Should return a user object with age as 45", () => {
@@ -201,6 +199,7 @@ describe("Testing imported functions", () => {
 
 
     })
+
     // done by Test Driven Development
     test("Finds a user by ID from a list of users", () => {
 
@@ -210,7 +209,8 @@ describe("Testing imported functions", () => {
             id: 2,
         })
 
-        expect(findUserById(users, 10)).toBeUndefined()
+        expect(findUserById(users, 10)).toBeUndefined();
 
     })
+
 })
